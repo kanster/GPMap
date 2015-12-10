@@ -372,7 +372,7 @@ public:
 		logDlib.set_size(logHyp.size());
 		GP::Hyp2Dlib<Scalar, MeanFunc, CovFunc, LikFunc>(logHyp, logDlib);
 
-		// trainer
+		// trainer ***********************Kanzhi 03:21
 #if EIGEN_VERSION_AT_LEAST(3,2,0)
 		GP::DlibScalar minNlZ = GP::TrainerUsingApproxDerivatives<OctreeGPMapType>::train<GP::BOBYQA, GP::NoStopping>(logDlib,
 																																						  *this, // Bug: const object
